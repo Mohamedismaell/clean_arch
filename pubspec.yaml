@@ -9,6 +9,14 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  dio: ^5.9.0
+  shared_preferences: ^2.5.3
+  data_connection_checker_tv: ^0.3.5-nullsafety
+  dartz: ^0.10.1
+  flutter_bloc: ^9.1.1
+  bloc: ^9.1.0
+  meta: ^1.16.0
+  get_it: ^8.2.0
 
 dev_dependencies:
   flutter_test:
