@@ -1,14 +1,13 @@
-import 'package:clean_arch/core/errors/failure.dart';
 import 'package:clean_arch/core/params/params.dart';
-import 'package:clean_arch/features/users/domain/entities/user_entity.dart';
 import 'package:clean_arch/features/users/domain/repositories/user_repository.dart';
-import 'package:dartz/dartz.dart';
+import '../../../../core/connections/result.dart';
+import '../../data/models/user_model.dart';
 
 class GetUser {
   final UserRepository repository;
   GetUser({required this.repository});
 
-  Future<Either<Failure, UserEntity>> call({
+  Future<Result<UserModel>> call({
     required UserParams params,
   }) {
     return repository.getUsers(params: params);

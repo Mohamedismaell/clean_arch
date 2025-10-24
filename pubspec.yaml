@@ -1,6 +1,6 @@
 name: clean_arch
 description: "A new Flutter project."
-publish_to: 'none'
+publish_to: "none"
 version: 0.1.0
 
 environment:
@@ -9,6 +9,11 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+
+  firebase_core: ^4.1.1
+  firebase_auth: ^6.1.0
+  image_picker: ^1.2.0
+  supabase_flutter: ^2.10.2
   dio: ^5.9.0
   shared_preferences: ^2.5.3
   data_connection_checker_tv: ^0.3.5-nullsafety

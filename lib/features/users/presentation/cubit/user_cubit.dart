@@ -5,6 +5,9 @@ import 'package:clean_arch/features/users/domain/usecases/get_user.dart';
 
 import 'package:meta/meta.dart';
 
+import '../../../../core/errors/failure.dart';
+import '../../data/models/user_model.dart';
+
 part 'user_state.dart';
 
 class UserCubit extends Cubit<UserState> {
@@ -16,11 +19,11 @@ class UserCubit extends Cubit<UserState> {
       params: UserParams(id: id.toString()),
     );
 
-    failureOrSuccess.fold(
-      (errMessage) => emit(
-        UserError(errMessage: errMessage.errMessage),
-      ),
-      (user) => emit(UserLoaded(user: user)),
+    failureOrSuccess.when(
+      success: (UserModel user) =>
+          emit(UserLoaded(user: user)),
+      failure: (Failure error) =>
+          emit(UserError(errMessage: error.toString())),
     );
   }
 

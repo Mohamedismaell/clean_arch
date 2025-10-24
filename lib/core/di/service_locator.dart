@@ -1,11 +1,11 @@
-import 'package:clean_arch/features/users/data/repositories/user_repository_impl.dart';
-import 'package:clean_arch/features/users/domain/usecases/get_user.dart';
 import 'package:data_connection_checker_tv/data_connection_checker.dart';
 import 'package:dio/dio.dart';
 import 'package:get_it/get_it.dart';
 
 import '../../features/users/data/datascource/user_local_data_source.dart';
 import '../../features/users/data/datascource/user_remote_data_source.dart';
+import '../../features/users/data/repositories/user_repository_impl.dart';
+import '../../features/users/domain/usecases/get_user.dart';
 import '../connections/network_info.dart';
 import '../database/api/dio_consumer.dart';
 import '../database/cache/cache_helper.dart';
