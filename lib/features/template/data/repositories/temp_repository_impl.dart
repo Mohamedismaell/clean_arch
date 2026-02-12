@@ -2,11 +2,11 @@ import 'package:clean_arch/features/template/data/datasources/temp_local_data_so
 import 'package:clean_arch/features/template/data/datasources/temp_remote_data_source.dart';
 import 'package:clean_arch/features/template/domain/repositories/temp_repository.dart';
 
-class NewsRepositoryImpl extends TemplateRepository {
+class TemplateRepositoryImpl extends TemplateRepository {
   // final NetworkInfo networkInfo;
   final TemplateRemoteDataSource remoteDataSource;
   final TemplateLocalDataSource localDataSource;
-  NewsRepositoryImpl({
+  TemplateRepositoryImpl({
     required this.remoteDataSource,
     required this.localDataSource,
     // required this.networkInfo,
